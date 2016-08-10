@@ -3,6 +3,8 @@ https://kelvins.esa.int/mars-express-power-challenge/
 
 A big thank you to the European Space Agency and specifically the Advanced Concepts Team and the Data Analytics Team of the Advanced Mission Concepts Section for a very interesting and well organized competition.
 
+This repository is still a work in progress.
+
 ## Dependencies
 - python 2.7
 - scikit-learn 0.17.1
