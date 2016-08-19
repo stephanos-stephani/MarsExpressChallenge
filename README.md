@@ -11,6 +11,9 @@ This repository is still a work in progress.
 - xgboost 0.4
 - pandas 0.18.1
 
+## Workflow of best submission
+![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
+
 ## Feature Engineering
 Note that not all features necessarily made it to the final model but all are available for `MarsExpressPowerChallenge.ipynb` when it  scans for important features.
 
