@@ -22,8 +22,6 @@ In the Mars Express Power Challenge competitors were asked to analyse the three 
 - xgboost 0.4
 - pandas 0.18.1
 
-## Workflow of best submission
-![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
 
 ## Feature Engineering
 Note that not all features necessarily made it to the final model but all are available for `MarsExpressPowerChallenge.ipynb` when it  scans for important features.
@@ -55,6 +53,18 @@ Context files were used as follows, custom features are marked with an asterisk
 
 #### SAAF
 'sa','sx',sy','sz'
+
+## Workflow
+### Best submission (Public RMSE:0.08025 (1st place) Overall RMSE: 0.08030 (2nd place))
+Uses a constant set of features for all power lines, but trains power lines independently.
+Combines xgboost and Extra tree models.
+![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
+
+### Maybe most practical submission submission (Public RMSE:0.0825 (4th))
+Whereas the best submission had some manual feature selection, and an arguably complicated ensemble procedure, an attractive alternative is the following, which might be more robust for future operations: 
+1. Automatically selecting the best features per power line by first training an extra trees regressor for each power line.
+2. Training a simple ensemble of xgboost and Extra Trees on each power line
+![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/flexible_model.png)
 
 
 ## Acknowledgements
