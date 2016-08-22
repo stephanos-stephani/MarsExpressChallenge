@@ -3,6 +3,16 @@ This repo summarizes the 2nd place solution in the Mars Express Power Challenge 
 
 This repository is still a work in progress.
 
+**Contents** :
+
+1. [Background](#background)
+2. [Dependencies](#dependencies)
+3. [Feature Engineering](#feature-engineering)
+4. [Workflow](#workflow)
+    - [Best submission](#best-submission)
+    - [Perhaps most practical submission](#perhaps-most-practical-submission)
+5. [Acknowledgements](#acknowledgements)
+
 ## Background
 The Mars Express spacecraft orbiting around Mars is operated by ESA and is the second longest surviving, continually active spacecraft in orbit around a planet other than Earth, behind only NASA's still active 2001 Mars Odyssey.
 
@@ -55,12 +65,16 @@ Context files were used as follows, custom features are marked with an asterisk
 'sa','sx',sy','sz'
 
 ## Workflow
-### Best submission (Public RMSE:0.08025 (1st place) Overall RMSE: 0.08030 (2nd place))
+### Best submission 
+(Public RMSE:0.08025 (1st place) Overall RMSE: 0.08030 (2nd place))
+
 Uses a constant set of features for all power lines, but trains power lines independently.
 Combines xgboost and Extra tree models.
 ![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
 
-### Maybe most practical submission submission (Public RMSE:0.0825 (4th))
+### Perhaps most practical submission  
+(Public RMSE:0.0825 (4th))
+
 Whereas the best submission had some manual feature selection, and an arguably complicated ensemble procedure, an attractive alternative is the following, which might be more robust for future operations: 
 1. Automatically selecting the best features per power line by first training an extra trees regressor for each power line.
 2. Training a simple ensemble of xgboost and Extra Trees on each power line
