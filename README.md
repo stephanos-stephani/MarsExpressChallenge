@@ -29,13 +29,13 @@ Note that not all features necessarily made it to the final model but all are av
 `DataReader.py` is responsible for all feature creation and data massaging. `dmopPairsExample.ipynb` plays with adding delays to all features.
 
 Context files were used as follows, custom features are marked with an asterisk
-#### EVTF 
+#### Events Files (EVTF)
 - Time to pericenter (\*)
 - Time in umbra/penumbra (\*)
 - Height change (\*)
 - Ascend / descend indicators (\*)
 
-#### LTDATA
+#### Long-term data (LTDATA)
 - solarconstantmars
 - sunmarsearthangle_deg
 - eclipseduration_min
@@ -43,15 +43,15 @@ Context files were used as follows, custom features are marked with an asterisk
 - sunmarsearthangle_deg2 (allows the angle to go negative) (\*)
 - conjuction indicator (\*)
 
-#### DMOP
+#### Detailed Mission Operations Plan (DMOP)
 - Command shorthands (first 4 chars) (\*)
 - Pairs of subsystem commands (\*) suspected to be on-off toggles (see `dmopPairsExample.ipynb`)
 
-#### FTL
+#### Flight Dynamics Timeline (FTL)
 'ACROSS_TRACK','D1PVMC','D2PLND','D3POCM','D4PNPO','D7PLTS','D8PLTP','D9PSPO',
 'EARTH','INERTIAL','MAINTENANCE','NADIR','NADIR_LANDER','SLEW','SPECULAR','WARMUP','flagcomms'
 
-#### SAAF
+#### Solar aspect angles (SAAF)
 'sa','sx',sy','sz'
 
 ## Workflow
