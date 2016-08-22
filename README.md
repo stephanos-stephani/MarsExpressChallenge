@@ -69,15 +69,44 @@ Context files were used as follows, custom features are marked with an asterisk
 (Public RMSE:0.08025 (1st place) Overall RMSE: 0.08030 (2nd place))
 
 Uses a constant set of features for all power lines, but trains power lines independently.
+Features were:
+
+| Feature               | Details                                             |
+|-----------------------|-----------------------------------------------------|
+| solarconstantmars     |                                                     |
+| sunmarsearthangle_deg |                                                     |
+| sa                    |                                                     |
+| sx                    |                                                     |
+| sy                    |                                                     |
+| sz                    |                                                     |
+| ttp                   | (Time to pericenter)                                |
+| pair3                 | ['ASSSF01P0', 'ASSSF06P0'] subsystem cmds used as on-off switches  |
+| pair4                 | ['AACFM01A', 'AACFM02A'] subsystem cmds used as on-off switches    |
+| pair9                 | ['ATTTF030A', 'ATTTF030B'] subsystem cmds used as on-off switches  |
+| pair10                |  ['ATTTF321P', 'ATTTF321R'] subsystem cmds used as on-off switches |
+| pair11                | ['AACFM01A', 'AACFM02A'] subsystem cmds used as on-off switches    |
+| UMBRA_time            | Time since umbra event                              |
+| ATMB                  | Subsystem commands prefixed with ATMB               |
+| height_change         | Height change from FTL                              |
+| asc_des               | Ascend-descend flags from FTL                       |
+| SLEW                  |                                                     |
+| SPECULAR              |                                                     |
+| WARMUP                |                                                     |
+| MOCS                  |                                                     |
+| MOCE                  |                                                     |
+| PENE                  |                                                     |
+
+
 Combines xgboost and Extra tree models.
 ![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
 
 ### Perhaps most practical submission  
 (Public RMSE:0.0825 (4th))
-
 Whereas the best submission had some manual feature selection, and an arguably complicated ensemble procedure, an attractive alternative is the following, which might be more robust for future operations: 
+
 1. Automatically selecting the best features per power line by first training an extra trees regressor for each power line.
 2. Training a simple ensemble of xgboost and Extra Trees on each power line
+
 ![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/flexible_model.png)
 
 
