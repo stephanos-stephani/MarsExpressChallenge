@@ -1,7 +1,6 @@
 # MarsExpressChallenge
 This repo summarizes the 2nd place solution in the Mars Express Power Challenge conducted by the European Space Agency (ESA). https://kelvins.esa.int/mars-express-power-challenge/
 
-This repository is still a work in progress.
 
 **Contents** :
 
@@ -36,7 +35,7 @@ In the Mars Express Power Challenge competitors were asked to analyse the three 
 ## Feature Engineering
 Note that not all features necessarily made it to the final model but all are available for `MarsExpressPowerChallenge.ipynb` when it  scans for important features.
 
-`DataReader.py` is responsible for all feature creation and data massaging. `dmopPairsExample.ipynb` plays with adding delays to all features.
+`DataReader.py` is responsible for all feature creation and data massaging except delays, which are added later in ipython notebook.
 
 Context files were used as follows, custom features are marked with an asterisk
 #### Events Files (EVTF)
@@ -96,7 +95,7 @@ Features were:
 | MOCE                  |                                                     |
 | PENE                  |                                                     |
 
-
+All above features exist in 3 incarnations: raw, smoothed with an EWMA, and in finite differences.
 Combines xgboost and Extra tree models.
 ![alt tag](https://raw.githubusercontent.com/stephanos-stephani/MarsExpressChallenge/master/pngs/best_submission_flow.png)
 
