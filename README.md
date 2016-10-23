@@ -80,7 +80,6 @@ Features were:
 | sz                    |                                                     |
 | ttp                   | (Time to pericenter)                                |
 | pair3                 | ['ASSSF01P0', 'ASSSF06P0'] subsystem cmds used as on-off switches  |
-| pair4                 | ['AACFM01A', 'AACFM02A'] subsystem cmds used as on-off switches    |
 | pair9                 | ['ATTTF030A', 'ATTTF030B'] subsystem cmds used as on-off switches  |
 | pair10                |  ['ATTTF321P', 'ATTTF321R'] subsystem cmds used as on-off switches |
 | pair11                | ['AACFM01A', 'AACFM02A'] subsystem cmds used as on-off switches    |
